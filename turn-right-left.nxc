@@ -1,0 +1,67 @@
+#define LIGHT_THRESHOLD 50               // Light reading for white tape
+#define BLACK_THRESHOLD 10               // Light reading for black tape
+#define MOTOR_LEFT 25                    // speed of motor A (left)
+#define MOTOR_RIGHT (MOTOR_LEFT*.80)     // speed of motor C (right)
+#define LEFT_SENSOR  IN_1                // left light sensor
+#define RIGHT_SENSOR IN_4                // right light sensor
+
+// Driving functions for convenience
+sub driveForward(int waitTime) {
+	OnFwd(OUT_A, MOTOR_LEFT);
+	OnFwd(OUT_C, MOTOR_RIGHT);
+	Wait(waitTime);
+}
+sub driveBackward(int waitTime) {
+	OnFwd(OUT_A, MOTOR_LEFT);
+	OnFwd(OUT_C, MOTOR_RIGHT);
+	Wait(waitTime);
+}
+sub turnLeft(int waitTime) {
+	OnFwd(OUT_C, MOTOR_RIGHT);
+	OnRev(OUT_A, MOTOR_LEFT);
+	Wait(waitTime);
+}
+sub turnRight(int waitTime) {
+	OnFwd(OUT_A, MOTOR_LEFT);
+	OnRev(OUT_C, MOTOR_RIGHT);
+	Wait(waitTime);
+}
+
+// Setup
+sub setup() {
+	//initiate sensors
+	SetSensorLight(LEFT_SENSOR);
+	SetSensorLight(RIGHT_SENSOR);
+}
+// Main loop
+task main() {
+	setup();
+	while(true) {
+
+		// If right sensor is on the tape
+		// and left sensor is off
+		// drive forward
+		if (RIGHT_SENSOR >= LIGHT_THRESHOLD &&
+			LEFT_SENSOR <= LIGHT_THRESHOLD) {
+			driveForward(1);
+		}
+
+		// If right sensor is on the tape
+		// and left sensor is also on the tape
+		// turn left
+		if (RIGHT_SENSOR >= LIGHT_THRESHOLD &&
+			LEFT_SENSOR >= LIGHT_THRESHOLD) {
+			turnLeft(1);
+			driveForward(1);
+		}
+
+		// If right sensor is off the tape
+		// and left sensor is off the tape
+		// turn right
+		if (RIGHT_SENSOR <= LIGHT_THRESHOLD &&
+			LEFT_SENSOR <= LIGHT_THRESHOLD) {
+			turnRight(1);
+			driveForward(1);
+		}
+	}
+}
