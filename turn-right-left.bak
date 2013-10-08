@@ -1,15 +1,23 @@
 // Settings
+#define WHITE_THRESHOLD 52			// Light reading for white tape
+#define BLACK_THRESHOLD 10			// Light reading for black tape
+#define ROBOT_SPEED 25				// Speed of robot in general
+
+#define MOTOR_MULTIPLIER .99		// Ratio of motors
+#define LIGHT_SENSOR_MULTIPLIER	.9	// Ratio of sensors
+
 #define LEFT_SENSOR  IN_4			// left light sensor
 #define RIGHT_SENSOR IN_1			// right light sensor
 
+// Constants
 #define MOTOR_LEFT 25
-#define MOTOR_RIGHT 24
+#define MOTOR_RIGHT 25
 
-#define LEFT_WHITE_THRESHOLD 49
-#define RIGHT_WHITE_THRESHOLD 49
+#define LEFT_WHITE_THRESHOLD 50
+#define RIGHT_WHITE_THRESHOLD 52
 
-#define LEFT_BLACK_THRESHOLD 24
-#define RIGHT_BLACK_THRESHOLD 27
+#define LEFT_BLACK_THRESHOLD 20
+#define RIGHT_BLACK_THRESHOLD 22
 
 // Driving functions for convenience
 sub driveForward(int waitTime) {
