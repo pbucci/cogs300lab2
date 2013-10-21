@@ -1,0 +1,231 @@
+#SYMBOLS
+Index	Identifier	Type	Flag	Data	Size	RefCount
+0	__DU0SetSensorLight_inline_main	5	1	0	4	2
+1	__signed_stack_001main	6	1	4	4	2
+2	__D0SetSensorLight_inline_main	6	1	8	4	3
+3	__D0wideTurnBackward	6	1	12	4	4
+4	__D0wideTurnForward	6	1	16	4	4
+5	__wideTurnForward_7qG2_lRatio_7qG2_000	10	1	20	4	2
+6	__constValf0P5	10	0	24	4	1
+7	__constValf0P7	10	0	28	4	1
+8	__wideTurnBackward_7qG2_rRatio_7qG2_000	10	1	32	4	2
+9	__wideTurnForward_7qG2_rRatio_7qG2_000	10	1	36	4	2
+10	__wideTurnBackward_7qG2_lRatio_7qG2_000	10	1	40	4	2
+11	__OnRevMutex	9	0	44	4	4
+12	__D0main	6	1	48	4	5
+13	__wideTurnForward_7qG2_motorLeft_7qG2_000	4	1	52	2	2
+14	__wideTurnForward_7qG2_waitTime_7qG2_000	4	1	54	2	2
+15	__wideTurnBackward_7qG2_motorRight_7qG2_000	4	1	56	2	2
+16	__wideTurnForward_7qG2_motorRight_7qG2_000	4	1	58	2	2
+17	__wideTurnBackward_7qG2_waitTime_7qG2_000	4	1	60	2	2
+18	__wideTurnBackward_7qG2_motorLeft_7qG2_000	4	1	62	2	2
+19	__wideTurnBackward_return	1	1	64	1	3
+20	____initialize_global_data_return	1	1	65	1	3
+21	__SetSensorLight_7qG2_port_7qG2_000_inline_main	1	1	66	1	4
+22	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_main	1	1	67	1	2
+23	__OnRev_Tmp	2	1	68	1	4
+24	__constVal25	2	0	69	1	2
+25	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main	1	1	70	1	2
+26	__SetSensorLight_7qG2_bActive_7qG2_000_inline_main	1	1	71	1	2
+27	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main	1	1	72	1	2
+28	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_main	1	1	73	1	2
+29	__constVal32	2	0	74	1	12
+30	__ResetSensorTmp	1	1	75	1	2
+31	__zfSetSensorLight_inline_main	1	1	76	1	2
+32	__ResetSensorPort	1	1	77	1	3
+33	__zfmain	1	1	78	1	5
+34	__constVal2	2	0	79	1	2
+35	____ResetSensorSubroutine_return	1	1	80	1	3
+36	__constVal96	2	0	81	1	4
+37	__wideTurnForward_return	1	1	82	1	3
+38	__constVal24	2	0	83	1	2
+39	__constVal1	2	0	84	1	4
+40	__constVal63	2	0	85	1	4
+41	__constVal3	2	0	86	1	4
+42	__constVal0	2	1	87	1	15
+#SOURCES
+Clump	Line	PC	Source
+0	49	0	#line 49 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	50	0		subcall __initialize_global_data, ____initialize_global_data_return
+0	49	2	#line 49 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	49	2	#line 49 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	50	2		set __SetSensorLight_7qG2_port_7qG2_000_inline_main, 0
+0	49	5	#line 49 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	50	5	#line 50 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	51	5		mov __SetSensorLight_7qG2_bActive_7qG2_000_inline_main, __constVal1
+0	3729	7	#line 3729 "NXCDefs.h"
+0	3730	7		mov __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorLight_7qG2_port_7qG2_000_inline_main
+0	3729	9	#line 3729 "NXCDefs.h"
+0	3729	9	#line 3729 "NXCDefs.h"
+0	3730	9		mov __DU0SetSensorLight_inline_main, __SetSensorLight_7qG2_bActive_7qG2_000_inline_main
+0	3729	11	#line 3729 "NXCDefs.h"
+0	3730	11		tst 5, __zfSetSensorLight_inline_main, __DU0SetSensorLight_inline_main
+0	3729	14	#line 3729 "NXCDefs.h"
+0	3730	14		brtst 4, __001__NXC_Label_4, __zfSetSensorLight_inline_main
+0	3729	17	#line 3729 "NXCDefs.h"
+0	3730	17		set __D0SetSensorLight_inline_main, 5
+0	3729	20	#line 3729 "NXCDefs.h"
+0	3730	20		jmp __001__NXC_Label_5
+0	3729	22	#line 3729 "NXCDefs.h"
+0	3730	22		set __D0SetSensorLight_inline_main, 6
+0	3729	25	#line 3729 "NXCDefs.h"
+0	3730	25		mov __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_main, __D0SetSensorLight_inline_main
+0	3663	27	#line 3663 "NXCDefs.h"
+0	3664	27		setin __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, 0
+0	3663	31	#line 3663 "NXCDefs.h"
+0	3730	31	#line 3730 "NXCDefs.h"
+0	3730	31	#line 3730 "NXCDefs.h"
+0	3731	31		mov __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorLight_7qG2_port_7qG2_000_inline_main
+0	3730	33	#line 3730 "NXCDefs.h"
+0	3730	33	#line 3730 "NXCDefs.h"
+0	3731	33		set __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_main, 128
+0	3730	36	#line 3730 "NXCDefs.h"
+0	3676	36	#line 3676 "NXCDefs.h"
+0	3677	36		setin __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, 1
+0	3676	40	#line 3676 "NXCDefs.h"
+0	3731	40	#line 3731 "NXCDefs.h"
+0	3731	40	#line 3731 "NXCDefs.h"
+0	3731	40	#line 3731 "NXCDefs.h"
+0	3694	40	#line 3694 "NXCDefs.h"
+0	3695	40	#pragma macro 4
+0	3695	40		mov __ResetSensorPort, __SetSensorLight_7qG2_port_7qG2_000_inline_main
+0	3695	42		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+0	7107	44	#line 7107 "NXCDefs.h"
+0	3694	44	#line 3694 "NXCDefs.h"
+0	3732	44	#line 3732 "NXCDefs.h"
+0	50	44	#line 50 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	50	44	#line 50 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	51	44		set __D0main, 1
+0	51	47	#line 51 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	52	47		tst 5, __zfmain, __D0main
+0	51	50	#line 51 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	52	50		brtst 4, __NXC_Label_649, __zfmain
+0	51	53	#line 51 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	52	53		getin __signed_stack_001main, __constVal0, 4
+0	51	57	#line 51 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	51	57	#line 51 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	52	57		set __D0main, 49
+0	51	60	#line 51 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	52	60		cmp 1, __zfmain, __signed_stack_001main, __D0main
+0	51	64	#line 51 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	52	64		mov __D0main, __zfmain
+0	52	66	#line 52 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	53	66		brtst 4, __NXC_Label_654, __zfmain
+0	52	69	#line 52 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	53	69		set __wideTurnBackward_7qG2_waitTime_7qG2_000, 4
+0	52	72	#line 52 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	52	72	#line 52 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	53	72		mov __wideTurnBackward_7qG2_lRatio_7qG2_000, __constVal1
+0	52	74	#line 52 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	52	74	#line 52 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	53	74		mov __wideTurnBackward_7qG2_rRatio_7qG2_000, __constValf0P5
+0	52	76	#line 52 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	53	76	#line 53 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	54	76		subcall wideTurnBackward, __wideTurnBackward_return
+0	53	78	#line 53 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	55	78	#line 55 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	56	78		jmp __NXC_Label_661
+0	55	80	#line 55 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	56	80		set __wideTurnForward_7qG2_waitTime_7qG2_000, 5
+0	55	83	#line 55 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	55	83	#line 55 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	56	83		mov __wideTurnForward_7qG2_lRatio_7qG2_000, __constVal1
+0	55	85	#line 55 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	55	85	#line 55 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	56	85		mov __wideTurnForward_7qG2_rRatio_7qG2_000, __constValf0P7
+0	55	87	#line 55 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	56	87	#line 56 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	57	87		subcall wideTurnForward, __wideTurnForward_return
+0	56	89	#line 56 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	58	89	#line 58 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	60	89	#line 60 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	61	89		jmp __NXC_Label_648
+0	60	91	#line 60 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+0	61	91		exit -1, -1
+1	4885	0		setin __constVal1, __ResetSensorPort, 5
+1	4887	4		getin __ResetSensorTmp, __ResetSensorPort, 5
+1	4888	8		brtst 5, __SensorStillInvalid, __ResetSensorTmp
+1	4889	11		subret ____ResetSensorSubroutine_return
+2	32	0	#line 32 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	32	0	#line 32 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	33	0	#line 33 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	33	0	#line 33 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	34	0		mul __wideTurnForward_7qG2_motorLeft_7qG2_000, __constVal25, __wideTurnForward_7qG2_lRatio_7qG2_000
+2	33	4	#line 33 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	33	4	#line 33 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	33	4	#line 33 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	34	4	#line 34 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	34	4	#line 34 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	35	4		mul __wideTurnForward_7qG2_motorRight_7qG2_000, __constVal24, __wideTurnForward_7qG2_rRatio_7qG2_000
+2	34	8	#line 34 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	34	8	#line 34 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	35	8		mov __D0wideTurnForward, __wideTurnForward_7qG2_motorLeft_7qG2_000
+2	35	10	#line 35 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	36	10	#pragma macro 7
+2	36	10		setout __constVal2, 2, __D0wideTurnForward, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+2	6907	33	#line 6907 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	35	33	#line 35 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	35	33	#line 35 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	36	33		mov __D0wideTurnForward, __wideTurnForward_7qG2_motorRight_7qG2_000
+2	36	35	#line 36 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	37	35	#pragma macro 7
+2	37	35		setout __constVal0, 2, __D0wideTurnForward, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+2	6914	58	#line 6914 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	36	58	#line 36 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	36	58	#line 36 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	36	58	#line 36 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	7921	58	#line 7921 "NXCDefs.h"
+2	7922	58		waitv __wideTurnForward_7qG2_waitTime_7qG2_000
+2	7921	60	#line 7921 "NXCDefs.h"
+2	37	60	#line 37 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	38	60	#line 38 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+2	39	60		subret __wideTurnForward_return
+3	39	0	#line 39 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	39	0	#line 39 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	40	0	#line 40 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	40	0	#line 40 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	41	0		mul __wideTurnBackward_7qG2_motorLeft_7qG2_000, __constVal25, __wideTurnBackward_7qG2_lRatio_7qG2_000
+3	40	4	#line 40 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	40	4	#line 40 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	40	4	#line 40 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	41	4	#line 41 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	41	4	#line 41 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	42	4		mul __wideTurnBackward_7qG2_motorRight_7qG2_000, __constVal24, __wideTurnBackward_7qG2_rRatio_7qG2_000
+3	41	8	#line 41 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	41	8	#line 41 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	42	8		mov __D0wideTurnBackward, __wideTurnBackward_7qG2_motorLeft_7qG2_000
+3	42	10	#line 42 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	43	10	#pragma macro 10
+3	43	10		acquire __OnRevMutex
+3	43	11		neg __OnRev_Tmp, __D0wideTurnBackward
+3	43	14		setout __constVal2, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+3	43	37		release __OnRevMutex
+3	6984	38	#line 6984 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	42	38	#line 42 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	42	38	#line 42 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	43	38		mov __D0wideTurnBackward, __wideTurnBackward_7qG2_motorRight_7qG2_000
+3	43	40	#line 43 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	44	40	#pragma macro 10
+3	44	40		acquire __OnRevMutex
+3	44	41		neg __OnRev_Tmp, __D0wideTurnBackward
+3	44	44		setout __constVal0, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+3	44	67		release __OnRevMutex
+3	6991	68	#line 6991 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	43	68	#line 43 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	43	68	#line 43 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	43	68	#line 43 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	7921	68	#line 7921 "NXCDefs.h"
+3	7922	68		waitv __wideTurnBackward_7qG2_waitTime_7qG2_000
+3	7921	70	#line 7921 "NXCDefs.h"
+3	44	70	#line 44 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	47	70	#line 47 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+3	48	70		subret __wideTurnBackward_return
+4	61	0	#line 61 "C:\Users\Andy\AppData\Local\Temp\temp.nxc"
+4	62	0		subret ____initialize_global_data_return
+#CLUMPS
+Clump	Name	Offset	File
+0	main	0	C:\Users\Andy\AppData\Local\Temp\temp.nxc
+1	__ResetSensorSubroutine	94	NXTDefs.h
+2	wideTurnForward	107	C:\Users\Andy\AppData\Local\Temp\temp.nxc
+3	wideTurnBackward	169	C:\Users\Andy\AppData\Local\Temp\temp.nxc
+4	__initialize_global_data	241	C:\Users\Andy\AppData\Local\Temp\temp.nxc

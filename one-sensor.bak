@@ -1,0 +1,59 @@
+// Settings
+#define LIGHT_SENSOR  IN_4			// left light sensor
+
+#define MOTOR_LEFT 25
+#define MOTOR_RIGHT 24
+
+#define WHITE_THRESHOLD 49
+#define BLACK_THRESHOLD 24
+
+// Driving functions for convenience
+sub driveForward(int waitTime) {
+	OnFwd(OUT_A, MOTOR_RIGHT);
+	Wait(waitTime);
+}
+sub driveBackward(int waitTime) {
+	OnFwd(OUT_C, MOTOR_LEFT);
+	OnFwd(OUT_A, MOTOR_RIGHT);
+	Wait(waitTime);
+}
+sub turnLeft(int waitTime) {
+	OnFwd(OUT_A, MOTOR_RIGHT);
+	OnRev(OUT_C, MOTOR_LEFT);
+	Wait(waitTime);
+}
+sub turnRight(int waitTime) {
+	OnFwd(OUT_C, MOTOR_LEFT);
+	OnRev(OUT_A, MOTOR_RIGHT);
+	Wait(waitTime);
+}
+
+// Turns wide
+sub wideTurnForward(int waitTime, float lRatio, float rRatio) {
+  int motorLeft  = MOTOR_LEFT*lRatio;
+  int motorRight = MOTOR_RIGHT*rRatio;
+  OnFwd(OUT_C, motorLeft);
+	OnFwd(OUT_A, motorRight);
+  Wait(waitTime);
+}
+sub wideTurnBackward(int waitTime, float lRatio, float rRatio) {
+  int motorLeft  = MOTOR_LEFT*lRatio;
+  int motorRight = MOTOR_RIGHT*rRatio;
+  OnRev(OUT_C, motorLeft);
+	OnRev(OUT_A, motorRight);
+  Wait(waitTime);
+}
+
+// Main loop
+task main() {
+	//initiate sensors
+	SetSensorLight(LIGHT_SENSOR);
+	while(true) {
+    if ( Sensor(LIGHT_SENSOR) > WHITE_THRESHOLD) {
+       wideTurnBackward(4,1.0,0.5);
+    }
+    else {
+       wideTurnForward(5,1.0,0.7);
+    }
+  }
+}
