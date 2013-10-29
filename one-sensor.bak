@@ -1,11 +1,11 @@
 // Settings
-#define LIGHT_SENSOR  IN_4			// light sensor
+#define LIGHT_SENSOR	IN_4	// light sensor
+#define TOUCH_SENSOR	IN_1	// touch sensor
+#define MOTOR_LEFT		50
+#define MOTOR_RIGHT		50
 
-#define MOTOR_LEFT 70
-#define MOTOR_RIGHT 70
-
-#define WHITE_THRESHOLD 42
-#define BLACK_THRESHOLD 24
+#define WHITE_THRESHOLD 40
+#define BLACK_THRESHOLD 25
 
 // Driving functions for convenience
 sub driveForward(int waitTime) {
@@ -30,30 +30,30 @@ sub turnRight(int waitTime) {
 
 // Turns wide
 sub wideTurnForward(int waitTime, float lRatio, float rRatio) {
-  int motorLeft  = MOTOR_LEFT*lRatio;
-  int motorRight = MOTOR_RIGHT*rRatio;
-  OnFwd(OUT_C, motorLeft);
+	int motorLeft  = MOTOR_LEFT*lRatio;
+	int motorRight = MOTOR_RIGHT*rRatio;
+	OnFwd(OUT_C, motorLeft);
 	OnFwd(OUT_A, motorRight);
-  Wait(waitTime);
+	Wait(waitTime);
 }
 sub wideTurnBackward(int waitTime, float lRatio, float rRatio) {
-  int motorLeft  = MOTOR_LEFT*lRatio;
-  int motorRight = MOTOR_RIGHT*rRatio;
-  OnRev(OUT_C, motorLeft);
+	int motorLeft  = MOTOR_LEFT*lRatio;
+	int motorRight = MOTOR_RIGHT*rRatio;
+	OnRev(OUT_C, motorLeft);
 	OnRev(OUT_A, motorRight);
-  Wait(waitTime);
+	Wait(waitTime);
 }
-
 // Main loop
 task main() {
 	//initiate sensors
 	SetSensorLight(LIGHT_SENSOR);
+	SetSensorTouch(TOUCH_SENSOR);
 	while(true) {
-    if ( Sensor(LIGHT_SENSOR) > WHITE_THRESHOLD) {
-       wideTurnBackward(800,1.0,0.3);
+		if ( Sensor(LIGHT_SENSOR) > WHITE_THRESHOLD || Sensor(TOUCH_SENSOR) == true) {
+			wideTurnBackward(800,1.0,0.3);
+		}
+		else {
+			wideTurnForward(10,1.0,0.6);
+		}
     }
-    else {
-       wideTurnForward(10,1.0,0.6);
     }
-  }
-}
